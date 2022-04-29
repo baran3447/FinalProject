@@ -10,12 +10,14 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
             ProductManeger productManeger = new ProductManeger(new EfProductDal());
 
-            foreach (var product in productManeger.GetAll())
+            foreach (var product in productManeger.GetAllByCategory(5))
             {
                 Console.WriteLine(product.ProductName); 
                 
+
             }
 
         }
